@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-6">
+            @using (Html.BeginForm("GetQrCodePost", "Home", FormMethod.Post))
+            {
+                <h2>Default Qr Code</h2>
+                <div class="form-group">
+                    <label>Enter Text: </label>
+                    <input class="form-control" name="qrText" id="qrText" placeholder="Enter text to encode: " />
+                </div>
+
+                <button type="submit" class="btn btn-dark">Generate</button>
+            }
+        </div>
+        <div class="col-6"> <img src="~/Content/images/GetQrCodePostDefault.jpg" /></div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            @using (Html.BeginForm("GetColorQrCodePost", "Home", FormMethod.Post))
+            {
+                <h2>Colored Qr Code</h2>
+                <div class="form-group">
+                    <label>Enter Text: </label>
+                    <input class="form-control" name="qrText" id="qrText" placeholder="Enter text to encode: " />
+                </div>
+
+                <button type="submit" class="btn btn-dark">Generate</button>
+            }
+        </div>
+        <div class="col-6">
+            <img src="~/Content/images/GetColorQrCodePost.jpg" />
+        </div>
+    </div>
+</div>
+
+
+
+
